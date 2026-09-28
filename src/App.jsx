@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
@@ -16,7 +16,7 @@ import AdminPage from './pages/AdminPage.jsx';
 export default function App() {
   return (
     <DataProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="flex flex-col min-h-screen bg-[#080c14] text-slate-100 selection:bg-brand-blue/20 selection:text-brand-blue">
           {/* Navigation Bar */}
           <Navbar />
@@ -38,7 +38,7 @@ export default function App() {
           {/* Global Footer */}
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </DataProvider>
   );
 }
